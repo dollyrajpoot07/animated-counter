@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(255, 235, 15) url("https://source.unsplash.com/random");
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Pushing to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+header {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 50px;
+}
+
+.counters {
+  background: #ffffff;
+  color: #022800;
+  padding: 40px 20px;
+  border-top: 3px rgb(255, 235, 15) solid;
+}
+
+.counters .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.counters i {
+  color: rgb(255, 235, 15);
+  margin-bottom: 5px;
+}
+
+i.fa-youtube {
+  color: #ff0000;
+}
+
+i.fa-twitter {
+  color: #00acee;
+}
+
+i.fa-facebook {
+  color: #4267b2;
+}
+
+i.fa-linkedin {
+  color: #0077b5;
+}
+.counters .counter {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  .counters .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counters .container > div:nth-of-type(1),
+  .counters .container > div:nth-of-type(2) {
+    border-bottom: 1px rgb(255, 235, 15) solid;
+    padding-bottom: 20px;
+  }
+}
